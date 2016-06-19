@@ -1,0 +1,74 @@
+{
+  "properties_optimization": {
+    "model_filename":"/home/toni/IdeaProjects/Dola/src/ml-server_test_five/data/saved_models/model1.ckpt",
+    "save_threshold":0.8,
+
+    "optimizer":"GradientDescentOptimizer",
+    "learning_rate":0.001,
+    "batch_size":500,
+    "max_iterations":10000,
+    "acc_no_imp_limit":1000,
+
+    "n_input":100,
+    "n_steps":60,
+    "n_output":2,
+    "n_char":128,
+
+    "display_step":10,
+    "n_validation":1000
+  },
+
+  "properties_prediction": {
+    "model_filename":"/home/toni/IdeaProjects/Dola/src/ml-server_test_five/data/saved_models/model1.ckpt",
+
+    "n_input":100,
+    "n_steps":60,
+    "n_output":2,
+    "n_char":128,
+
+    "n_prediction":1,
+
+    "reload_hours":0,
+    "reload_minutes":3,
+    "reload_seconds":0
+  },
+
+  "properties_datasources": {
+    "aggregator": [
+      {
+        "type":"whitelist",
+        "source":"/home/toni/ml-data/whitelists/dms_sanity_file.txt",
+        "priority":1,
+        "active":1
+      },
+      {
+        "type":"blacklist",
+        "source":"/home/toni/ml-data/blacklists/elist.txt",
+        "priority":2,
+        "active":1
+      },
+      {
+        "type":"blacklist",
+        "source":"/home/toni/ml-data/blacklists/blist.txt",
+        "priority":3,
+        "active":1
+      },
+      {
+        "type":"basic_file",
+        "source":"/home/toni/ml-data/migt/migt.txt",
+        "priority":4,
+        "active":1
+      },
+      {
+        "type":"basic_file",
+        "source":"/home/toni/ml-data/telemetry/telemetry.txt",
+        "priority":5,
+        "active":1
+      }
+    ],
+    "create_datasource":0,
+    "training_filename":"/home/toni/ml-data/training_dataset.txt",
+    "validation_filename":"/home/toni/ml-data/validation_dataset.txt",
+    "n_validation":2000
+  }
+}

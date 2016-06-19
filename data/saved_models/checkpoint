@@ -1,0 +1,2 @@
+model_checkpoint_path: "/home/toni/IdeaProjects/Dola/src/ml-server_test_five/data/saved_models/model1.ckpt"
+all_model_checkpoint_paths: "/home/toni/IdeaProjects/Dola/src/ml-server_test_five/data/saved_models/model1.ckpt"
